@@ -11,13 +11,15 @@
 <script src="/webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+${contenido}
 <div class="container">
 <div class="card" >
 <div class="card-header"> ${nota.getTitulo()}</div>
 <div class="card-body">
  ${ nota.getContenido()}
 </div>
+</div>
+<a href="/notas/" class="btn btn-primary">Volcer a la lista</a>
 </div>
 
 

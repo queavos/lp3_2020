@@ -9,4 +9,5 @@ public interface INotasService {
 	public Nota getNota(int notaId);
 	public void insertNota(Nota nota);
 	public Nota saveNota(Nota nota);
+	public void deleteNota(int notaId);
 }

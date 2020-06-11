@@ -1,6 +1,7 @@
 package unae.lp3.notas.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,8 +22,9 @@ public class NotasServiceImpl implements INotasService {
 
 	@Override
 	public Nota getNota(int notaId) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<Nota> t=notarepo.findById(notaId);
+		Nota nota=t.get();
+		return nota;
 	}
 
 	@Override
@@ -35,7 +37,16 @@ public class NotasServiceImpl implements INotasService {
 	@Override
 	public Nota saveNota(Nota nota) {
 		// TODO Auto-generated method stub
-		return null;
+		return notarepo.save(nota);
 	}
+
+	@Override
+	public void deleteNota(int notaId) {
+		// TODO Auto-generated method stub
+		notarepo.deleteById(notaId);
+		
+	}
+
+
 
 }

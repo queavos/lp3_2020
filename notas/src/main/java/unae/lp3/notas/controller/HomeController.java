@@ -39,11 +39,10 @@ public class HomeController {
 		datos.addAttribute("notas", notas);
 		return "dos";
 	}
-	@GetMapping(value="nuevo")
-	public String nuevo() 
-	{		
-	return "f_new";	
-	}
+
+	/*
+	 * @GetMapping(value="nuevo") public String nuevo() { return "f_new"; }
+	 */
 	@PostMapping(value="nuevo")
 	public String guardar(Nota nota, Model datos) 
 	{
